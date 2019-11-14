@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css?t=<?= time() ?>" media="all">
+    <title>Calculatrice</title>
+    <link rel="icon" type="image/PNG" href="calcu.jfif" />
+    <script src="fonction.js" async></script>
+</head>
+
+<body>
+    <div class='calculator'>
+        <input type='text' id='display' readonly='true' value='0'>
+
+        <div class='line'>
+            <button type='button' id='clean' class='buttonC'>C</button>
+            <button type='button' id='erase'>←</button>
+            <button type='button' class='operator'>÷</button>
+        </div>
+
+        <div class='line'>
+            <button type='button' class='number'>7</button>
+            <button type='button' class='number'>8</button>
+            <button type='button' class='number'>9</button>
+            <button type='button' class='operator'>×</button>
+        </div>
+
+        <div class='line'>
+            <button type='button' class='number'>4</button>
+            <button type='button' class='number'>5</button>
+            <button type='button' class='number'>6</button>
+            <button type='button' class='operator'>-</button>
+        </div>
+
+        <div class='line'>
+            <button type='button' class='number'>1</button>
+            <button type='button' class='number'>2</button>
+            <button type='button' class='number'>3</button>
+            <button type='button' class='operator'>+</button>
+        </div>
+
+        <div class='line'>
+            <button type='button' id='buttonZero' class='number'>0</button>
+            <button type='button' id='point' class='number'>.</button>
+            <button type='button' id='equal' class='operator'>=</button>
+        </div>
+
+    </div>
+</body>

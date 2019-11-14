@@ -1,0 +1,64 @@
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 500px;
+}
+
+.line {
+    background-color: #595959;
+    flex: 1 1 0;
+    display: flex;
+}
+
+input[type=text] {
+    color: white;
+    background-color: #595959;
+    border: none;
+    text-align: right;
+    flex: 0.8 1 0;
+    padding: 5px;
+    font-size: 30px;
+}
+
+button {
+    background-color: lightgrey;
+    flex: 1 1 0;
+    border: none ;
+    margin : 1px;
+    padding: 0px ;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color:#BFBFBF;
+}
+
+button:active {
+    background-color: grey;
+}
+
+button:focus {
+    outline: none ;
+}
+
+.buttonC {
+    flex: 2 2 2px ;
+}
+
+#buttonZero {
+    flex: 2 2 2px;
+}
+
+.operator {
+    background-color: #B0E0E6;
+}
+
+.operator:hover {
+    background-color:#8ad2db;
+}
+
+.operator:active {
+    background-color: #439da8;
+}
+
