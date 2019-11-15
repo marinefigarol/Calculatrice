@@ -8,4 +8,4 @@ Cette première version de calculatrice permet de réaliser des calculs avec les
 
 ## CalculatriceV2
 
-Cette seconde version permet de réaliser des calculs avec les opérateurs basiques sur des nombres à virgule positifs.
+Cette seconde version permet de réaliser des calculs avec les opérateurs basiques sur des nombres à virgule.
