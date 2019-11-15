@@ -56,7 +56,7 @@ function compute(first, second, op) {
 // Réalise le calcul lorsque l'on appuie sur '='
 function finalCompute() {
     secondPart = parseFloat(display.value) ;
-    operation = true ;
+    //operation = true ;
     display.value = compute(firstPart, secondPart, operator) ;
     firstPart = secondPart = 0 ;
     operator = null ;
@@ -64,12 +64,18 @@ function finalCompute() {
 
 // Réalise les opération lorsqu'on appuie sur un opérateur
 function makeOperation() {
-    if ((display.value === '0' && operator === null && operation === false) || (operator != null && operation === true)) {
+    if (operator != null && operation === true && this.id !== 'less') {
         return ;
     }
-    operation = true ;
-    firstPart = compute(firstPart, parseFloat(display.value), operator) ;
-    operator = this.firstChild.textContent ;
+    if (this.id === 'less' && operation === true) {
+        display.value = this.firstChild.textContent ;
+        operation = false;
+    } else {
+        operation = true ;
+        firstPart = compute(firstPart, parseFloat(display.value), operator) ;
+        operator = this.firstChild.textContent ;
+        display.value = operator ;
+    }
 }
 
 
@@ -82,23 +88,33 @@ init() ;
 
 for (var i=0, c=button_list.length ; i<c ; i++) {
     // Bouton qui efface tout
-    if (button_list[i].id == 'clean') {
+    if (button_list[i].id === 'clean') {
         button_list[i].addEventListener('click', cleanAll);
     }
     // Bouton qui supprime la dernière entrée
-    else if (button_list[i].id == 'erase') {
+    else if (button_list[i].id === 'erase') {
         button_list[i].addEventListener('click', cleanOne);
     }
     // bouton avec un chiffre
-    else if (button_list[i].className == 'number') {
+    else if (button_list[i].className === 'number') {
         button_list[i].addEventListener('click', write);
     }
     // Bouton égal
-    else if (button_list[i].id == 'equal') {
+    else if (button_list[i].id === 'equal') {
         button_list[i].addEventListener('click', finalCompute);
     }
+    /*else if (button_list[i].id === 'less') {
+        button_list[i].addEventListener('click', function() {
+            if (operation === true) {
+                display.value = this.firstChild.textContent ;
+                operation = false;
+            } else {
+                makeOperation() ;
+            }
+        });
+    }*/
     // Bouton d'opération
-    else if (button_list[i].className == 'operator') {
+    else if (button_list[i].className === 'operator') {
         button_list[i].addEventListener('click', makeOperation);
     }
 }
