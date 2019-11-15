@@ -4,8 +4,8 @@ Ce projet a été réalisé en autonomie afin de m'exercer au JavaScript ainsi q
 
 ## CalculatriceV1
 
-Cette première version de calculatrice permet de réaliser des calculs avec les opérateurs basiques (addition, soustraction, multiplication et division) sur des entiers uniquement.
+Cette première version de calculatrice permet de réaliser des calculs avec les opérateurs basiques (addition, soustraction, multiplication et division) sur des entiers positifs uniquement.
 
 ## CalculatriceV2
 
-Cette seconde version permet de réaliser des calculs avec les opérateurs basiques sur des nombres à virgule.
+Cette seconde version permet de réaliser des calculs avec les opérateurs basiques sur des nombres à virgule positifs.
