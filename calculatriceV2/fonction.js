@@ -103,16 +103,6 @@ for (var i=0, c=button_list.length ; i<c ; i++) {
     else if (button_list[i].id === 'equal') {
         button_list[i].addEventListener('click', finalCompute);
     }
-    /*else if (button_list[i].id === 'less') {
-        button_list[i].addEventListener('click', function() {
-            if (operation === true) {
-                display.value = this.firstChild.textContent ;
-                operation = false;
-            } else {
-                makeOperation() ;
-            }
-        });
-    }*/
     // Bouton d'opération
     else if (button_list[i].className === 'operator') {
         button_list[i].addEventListener('click', makeOperation);
